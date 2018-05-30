@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
-	
+	//访问次数
+	@RequestMapping("/xyz")
+	public String count() {
+		return "access xyz";
+	}
 	
 	@Value("${git.commit.message.short}")
     private String commitMessage;
